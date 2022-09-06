@@ -3,6 +3,9 @@ import { nanoid } from "nanoid";
 import Form from "./components/Form";
 import FilterButton from "./components/FilterButton";
 import Todo from "./components/Todo";
+import { DatePicker } from 'antd';
+import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
+
 
 function usePrevious(value) {
   const ref = useRef();
@@ -95,6 +98,7 @@ function App(props) {
   
   return (
     <div className="todoapp stack-large">
+      <DatePicker />
       <h1>TodoMatic</h1>
       <Form addTask={addTask} />
       <div className="filters btn-group stack-exception">
